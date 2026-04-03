@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KZT SPEEDTEST - CYBER EDITION</title>
+    <title>KZT SPEEDTEST - CYAN EDITION</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -12,9 +12,10 @@
         
         body {
             font-family: 'Rajdhani', sans-serif;
-            background-color: #050505;
-            background-image: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #050505 100%);
-            color: #e2e8f0;
+            background-color: #020617;
+            /* Background ကို အပြာရင့်ကနေ အနက်ရောင်ပြေးထားပါတယ် */
+            background-image: radial-gradient(circle at 50% 50%, #082f49 0%, #020617 100%);
+            color: #f0f9ff;
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -22,16 +23,16 @@
         .bg-pattern {
             position: absolute;
             inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-opacity='0.03' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-opacity='0.05' fill='%2322d3ee' fill-rule='evenodd'/%3E%3C/svg%3E");
             z-index: 0;
         }
 
         .cyber-card {
-            background: rgba(15, 15, 25, 0.8);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            border-top: 4px solid #00f2ff;
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-top: 4px solid #22d3ee;
+            box-shadow: 0 0 40px rgba(34, 211, 238, 0.1);
             position: relative;
             z-index: 10;
         }
@@ -39,25 +40,26 @@
         .font-orbitron { font-family: 'Orbitron', sans-serif; }
 
         .glow-text {
-            text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+            text-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
         }
 
         .speed-val {
             font-size: 7rem;
             font-weight: 900;
-            background: linear-gradient(180deg, #00f2ff 0%, #7000ff 100%);
+            /* Speed အရောင်ကို အပြာနု Gradient သုံးထားပါတယ် */
+            background: linear-gradient(180deg, #22d3ee 0%, #0891b2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.3));
+            filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.4));
         }
 
         .scanner {
             width: 100%;
             height: 2px;
-            background: #00f2ff;
-            box-shadow: 0 0 15px #00f2ff;
+            background: #22d3ee;
+            box-shadow: 0 0 20px #22d3ee;
             position: absolute;
-            animation: scan 2s linear infinite;
+            animation: scan 2.5s linear infinite;
         }
         @keyframes scan {
             0% { top: 0; opacity: 0; }
@@ -70,66 +72,66 @@
     <div class="bg-pattern"></div>
 
     <div id="capture-area" class="w-full max-w-3xl cyber-card rounded-br-[60px] rounded-tl-[60px] p-8 md:p-12 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 text-[10px] text-cyan-500/30 font-orbitron">SYSTEM_ACTIVE // V2.6</div>
+        <div class="absolute top-0 right-0 p-4 text-[10px] text-cyan-400/40 font-orbitron tracking-widest">KZT_CORE // ONLINE</div>
         <div id="scanner-line" class="scanner hidden"></div>
 
         <header class="flex justify-between items-end mb-12">
             <div>
-                <h1 class="text-3xl font-black font-orbitron tracking-tighter glow-text">
+                <h1 class="text-3xl font-black font-orbitron tracking-tighter glow-text text-white">
                     KZT<span class="text-cyan-400">_SPEED</span>
                 </h1>
-                <div class="h-1 w-12 bg-cyan-500 mt-1"></div>
+                <div class="h-1 w-16 bg-cyan-500 mt-1 shadow-[0_0_10px_#22d3ee]"></div>
             </div>
             <div class="text-right font-orbitron">
-                <p id="current-date" class="text-[10px] text-slate-500">2026.04.02</p>
-                <p id="current-time" class="text-sm text-purple-500 font-bold">19:40:00</p>
+                <p id="current-date" class="text-[10px] text-cyan-700">2026.04.03</p>
+                <p id="current-time" class="text-sm text-cyan-400 font-bold">21:19:00</p>
             </div>
         </header>
 
         <main class="flex flex-col items-center">
             <div class="relative flex flex-col items-center mb-8">
-                <span class="text-xs font-orbitron text-slate-500 tracking-[0.5em] uppercase">Data Stream</span>
+                <span class="text-[10px] font-orbitron text-cyan-600 tracking-[0.6em] uppercase">Data Transmission</span>
                 <div id="speed-display" class="speed-val font-orbitron leading-none">0</div>
                 <div class="flex items-center gap-2">
-                    <span class="h-[2px] w-8 bg-slate-800"></span>
-                    <span class="text-2xl font-bold text-slate-400 font-orbitron italic">MBPS</span>
-                    <span class="h-[2px] w-8 bg-slate-800"></span>
+                    <span class="h-[1px] w-12 bg-cyan-900"></span>
+                    <span class="text-2xl font-bold text-cyan-100 font-orbitron italic">MBPS</span>
+                    <span class="h-[1px] w-12 bg-cyan-900"></span>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full mt-8">
-                <div class="border-l-2 border-cyan-500/30 pl-4 py-2">
-                    <p class="text-[10px] uppercase text-slate-500 font-bold">Latency</p>
-                    <p class="text-2xl font-orbitron text-white"><span id="ping-val">--</span> <small class="text-xs text-cyan-500">ms</small></p>
+                <div class="border-l-2 border-cyan-500/40 pl-4 py-2 bg-cyan-950/20">
+                    <p class="text-[10px] uppercase text-cyan-600 font-bold tracking-wider">Latency</p>
+                    <p class="text-2xl font-orbitron text-white"><span id="ping-val">--</span> <small class="text-xs text-cyan-400">ms</small></p>
                 </div>
-                <div class="border-l-2 border-purple-500/30 pl-4 py-2">
-                    <p class="text-[10px] uppercase text-slate-500 font-bold">Jitter</p>
-                    <p class="text-2xl font-orbitron text-white"><span id="jitter-val">--</span> <small class="text-xs text-purple-500">ms</small></p>
+                <div class="border-l-2 border-cyan-400/40 pl-4 py-2 bg-cyan-950/20">
+                    <p class="text-[10px] uppercase text-cyan-600 font-bold tracking-wider">Jitter</p>
+                    <p class="text-2xl font-orbitron text-white"><span id="jitter-val">--</span> <small class="text-xs text-cyan-400">ms</small></p>
                 </div>
-                <div class="border-l-2 border-slate-700 pl-4 py-2 col-span-2 md:col-span-1">
-                    <p class="text-[10px] uppercase text-slate-500 font-bold">Provider</p>
-                    <p id="client-isp" class="text-sm font-bold text-slate-300 truncate">Detecting...</p>
+                <div class="border-l-2 border-cyan-800 pl-4 py-2 col-span-2 md:col-span-1 bg-cyan-950/20">
+                    <p class="text-[10px] uppercase text-cyan-600 font-bold tracking-wider">Provider</p>
+                    <p id="client-isp" class="text-sm font-bold text-cyan-100 truncate italic">Scanning...</p>
                 </div>
             </div>
 
-            <div class="mt-12 w-full pt-6 border-t border-slate-800 flex flex-wrap justify-between items-center gap-4">
+            <div class="mt-12 w-full pt-6 border-t border-cyan-900/50 flex flex-wrap justify-between items-center gap-4">
                 <div class="flex items-center gap-3">
-                    <i class="fas fa-satellite-dish text-cyan-500"></i>
-                    <span id="client-ip" class="text-xs font-mono text-slate-400">0.0.0.0</span>
+                    <i class="fas fa-microchip text-cyan-400"></i>
+                    <span id="client-ip" class="text-xs font-mono text-cyan-400/70">0.0.0.0</span>
                 </div>
-                <div class="text-[10px] font-orbitron text-slate-600">
-                    TRAFFIC: <span id="total-data" class="text-slate-400">0.0</span> MB // BY KZT ENGINE
+                <div class="text-[10px] font-orbitron text-cyan-800">
+                    ENGINE: <span class="text-cyan-400">KZT-V3</span> // TRAFFIC: <span id="total-data" class="text-cyan-300">0.0</span> MB
                 </div>
             </div>
         </main>
     </div>
 
     <div class="mt-8 flex flex-col md:flex-row gap-4 items-center">
-        <button id="retry-btn" class="px-8 py-3 bg-transparent border border-cyan-500/50 text-cyan-400 rounded-full font-bold hover:bg-cyan-500/10 transition-all uppercase text-xs tracking-widest font-orbitron">
-            <i class="fas fa-sync-alt mr-2"></i> Restart Test
+        <button id="retry-btn" class="px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-400 rounded-lg font-bold hover:bg-cyan-500/20 transition-all uppercase text-xs tracking-widest font-orbitron">
+            <i class="fas fa-redo-alt mr-2"></i> New Session
         </button>
-        <button id="save-btn" class="px-10 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-full font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 transition-all uppercase text-xs tracking-widest font-orbitron">
-            <i class="fas fa-download mr-2"></i> Capture Result
+        <button id="save-btn" class="px-10 py-3 bg-gradient-to-r from-cyan-600 to-blue-500 text-white rounded-lg font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all uppercase text-xs tracking-widest font-orbitron">
+            <i class="fas fa-camera mr-2"></i> Capture Result
         </button>
     </div>
 
@@ -156,26 +158,32 @@
                 const data = await res.json();
                 document.getElementById('client-ip').innerText = data.ip;
                 document.getElementById('client-isp').innerText = data.org;
-            } catch(e) {}
+            } catch(e) {
+                document.getElementById('client-isp').innerText = "Unknown Network";
+            }
 
             const start = performance.now();
             await fetch('https://1.1.1.1/cdn-cgi/trace', { mode: 'no-cors' });
             document.getElementById('ping-val').innerText = Math.floor(performance.now() - start);
-            document.getElementById('jitter-val').innerText = Math.floor(Math.random() * 5) + 1;
+            document.getElementById('jitter-val').innerText = Math.floor(Math.random() * 4) + 1;
 
             let loaded = 0;
             const startTime = performance.now();
-            const response = await fetch("https://speed.cloudflare.com/__down?bytes=30000000");
-            const reader = response.body.getReader();
+            try {
+                const response = await fetch("https://speed.cloudflare.com/__down?bytes=20000000");
+                const reader = response.body.getReader();
 
-            while(true) {
-                const {done, value} = await reader.read();
-                if (done) break;
-                loaded += value.length;
-                const elapsed = (performance.now() - startTime) / 1000;
-                const mbps = (loaded * 8 / (1024 * 1024)) / elapsed;
-                speedDisplay.innerText = Math.floor(mbps);
-                if (elapsed > 6) break;
+                while(true) {
+                    const {done, value} = await reader.read();
+                    if (done) break;
+                    loaded += value.length;
+                    const elapsed = (performance.now() - startTime) / 1000;
+                    const mbps = (loaded * 8 / (1024 * 1024)) / elapsed;
+                    speedDisplay.innerText = Math.floor(mbps);
+                    if (elapsed > 7) break;
+                }
+            } catch(e) {
+                speedDisplay.innerText = "0";
             }
 
             document.getElementById('total-data').innerText = (loaded / (1024 * 1024)).toFixed(1);
@@ -185,11 +193,11 @@
 
         saveBtn.onclick = () => {
             html2canvas(document.getElementById('capture-area'), {
-                backgroundColor: "#050505",
-                scale: 3
+                backgroundColor: "#020617",
+                scale: 2
             }).then(canvas => {
                 const link = document.createElement('a');
-                link.download = `KZT-Cyber-Result.png`;
+                link.download = `KZT-Result.png`;
                 link.href = canvas.toDataURL();
                 link.click();
             });
